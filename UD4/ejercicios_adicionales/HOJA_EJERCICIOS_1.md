@@ -11,46 +11,17 @@ alarma se hará sonar un `RINGGGGGGGG`.
 
 Diagrama de clases (relaciones de composición):
 
-```
-RelojAlarma ◆--1--> Alarma
-RelojAlarma ◆--1--> VisorReloj --◆--2--> VisorNumero
-```
+![Diagrama de clases: RelojAlarma se compone de Alarma y VisorReloj; VisorReloj se compone de dos VisorNumero](img/uml_relojalarma_composicion.png)
 
 Las clases `VisorReloj` y `VisorNumero` no cambian, son las mismas que en el proyecto anterior.
 
-**Clase `Alarma`**
-
-| Atributos |
-|---|
-| `- hora: int` |
-| `- minutos: int` |
-
-| Métodos |
-|---|
-| `+ Alarma()` |
-| `+ setHoraAlarma(int, int): void` |
-| `+ getHoraAlarma(): String` |
+![Clase Alarma](img/uml_alarma.png)
 
 La clase `Alarma` guarda la hora de alarma, permite modificar esta hora con el método
 `setHoraAlarma()` y obtiene la hora de alarma como un `String` de la forma "XX:XX". El constructor
 de esta clase establece la alarma, por defecto, a las 7:00 horas.
 
-**Clase `RelojAlarma`**
-
-| Atributos |
-|---|
-| `- reloj: VisorReloj` |
-| `- alarma: Alarma` |
-
-| Métodos |
-|---|
-| `+ RelojAlarma(int, int)` |
-| `+ RelojAlarma()` |
-| `+ emitirTic(): void` |
-| `+ getHora(): String` |
-| `+ setAlarma(int, int): void` |
-| `- esHoraAlarma(): boolean` |
-| `+ getAlarma(): String` |
+![Clase RelojAlarma](img/uml_relojalarma.png)
 
 La clase `RelojAlarma` tiene dos atributos de tipo referencia, *reloj* de tipo `VisorReloj` y
 *alarma* de tipo `Alarma`. Esta clase incluye:
@@ -109,31 +80,9 @@ nuevo método en la clase `TestReloj` incluyendo el método `test3()`.
 
 Relación de composición en UML (un círculo *consta de* un centro que es de tipo `Punto`):
 
-```
-Circulo ◆----> Punto
-```
+![Composición: Circulo contiene un Punto](img/uml_circulo_punto.png)
 
-**Clase `Circulo`**
-
-| Atributos |
-|---|
-| `- PI: double` |
-| `- radio: double` |
-| `- centro: Punto` |
-
-| Métodos |
-|---|
-| `+ Circulo(double, Punto)` |
-| `+ Circulo(double)` |
-| `+ getRadio(): double` |
-| `+ getCentro(): Punto` |
-| `+ setRadio(int): void` |
-| `+ calcularArea(): double` |
-| `+ calcularPerímetro(): double` |
-| `+ setCentroX(int): void` |
-| `+ setCentroY(int): void` |
-| `+ printCirculo(): void` |
-| `+ toString(): String` |
+![Clase Circulo](img/uml_circulo.png)
 
 - Añade a la clase `Circulo` el atributo *centro*
 - Crea los dos constructores de la clase. Son constructores sobrecargados. El primero tiene dos
