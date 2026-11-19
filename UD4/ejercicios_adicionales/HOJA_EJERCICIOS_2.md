@@ -2,7 +2,7 @@
 
 ## Ejercicio 5
 
-Crea en `C:\Programacion\UT4` un nuevo proyecto `AD03_4_CirculoPunto`. El proyecto consta de dos clases,
+Crea en `C:\Programacion\UT4` un nuevo proyecto `AD05_LineaPunto`. El proyecto consta de dos clases,
 `Linea` y `Punto`. La clase `Punto` del ejercicio anterior nos puede servir: cópiala al proyecto
 nuevo desde el proyecto `AD03_04 Circulo y Punto`.  
 

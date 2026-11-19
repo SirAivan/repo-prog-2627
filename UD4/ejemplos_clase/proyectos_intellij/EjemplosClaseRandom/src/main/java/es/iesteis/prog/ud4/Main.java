@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Un boolean aleatorio: " + generador.nextBoolean());
 
         //Un double entre 0.0  y 10.0 (exc)
-        System.out.println("[0.0, 10): " + generador.nextDouble(10));
+        System.out.println("[0.0, 10): " + generador.nextDouble(7, 10));
 
 
         //Para pruebas, podemos conseguir resultados predecibles (para comparar) si
