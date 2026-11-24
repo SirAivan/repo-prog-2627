@@ -11,8 +11,7 @@ public class Moneda
     /**
      * Constructor  
      */
-    public Moneda()
-    {
+    public Moneda() {
          cara = true;
     }
 
@@ -22,17 +21,14 @@ public class Moneda
      *  Se genera un nº aleatorio, si es 0 suponemos cara, si es 1 suponemos cruz
      * 
      */
-    public void tirar()
-    {
+    public void tirar() {
          cara = ( (int) (Math.random() * 2) == 0);
     }
     
     /**
      * 
      */
-    public  boolean esCara()
-    {
+    public  boolean esCara(){
         return cara;
     }
-
 }
