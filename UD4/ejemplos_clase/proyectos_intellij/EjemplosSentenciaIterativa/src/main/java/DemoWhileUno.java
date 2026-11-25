@@ -61,10 +61,10 @@ public class DemoWhileUno
      * Uso de contadores
      */
     public void ejemplo03() {
-        int tiradas = 0;
-        int caras = 0;
-        int cruces = 0;
-        
+        int tiradas = 30, caras= 0, cruces = 0;
+        while (tiradas > 0 ){
+            tiradas --;
+        }
     }
 
     /**
@@ -72,9 +72,8 @@ public class DemoWhileUno
      * Suma y producto de los números naturales desde el 20 hasta el 1
      * Uso de acumuladores
      */
-    public void ejemplo04()
-    {
-
+    public void ejemplo04() {
+        
     }
 
     /**
