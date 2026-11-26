@@ -6,6 +6,7 @@ import java.util.Random;
  *  sentencia iterativa while
  *   
  */
+
 public class DemoWhileUno
 {
     private final char ESPACIO = ' ';
@@ -15,7 +16,6 @@ public class DemoWhileUno
     private Scanner teclado;
     private Dado dado;
     private Moneda moneda;
-
     /**
      * Constructor  
      */
@@ -39,7 +39,7 @@ public class DemoWhileUno
         while(contadorSaludos < 10){
             contadorSaludos++;
             System.out.println("Hola " + contadorSaludos);
-    }
+        }
     }
 
     /**
@@ -73,7 +73,15 @@ public class DemoWhileUno
      * Uso de acumuladores
      */
     public void ejemplo04() {
-        
+        int suma = 0, contador = 20;
+        long producto = 1;
+
+        while(contador >= 1){
+            suma += contador;
+            producto *= contador;
+            contador--;
+        }
+        System.out.printf("La suma es %d y el producto %,d", suma, producto);
     }
 
     /**
@@ -83,9 +91,12 @@ public class DemoWhileUno
      *  
      *  Bucle controlado por un valor centinela
      */
-    public void ejemplo05( )
-    {
-
+    public void ejemplo05( ) {
+        int aleatorio = generador.nextInt(41) + 10;
+        while(aleatorio != 25){
+            aleatorio = generador.nextInt(41) + 10;
+            System.out.printf("%-4d|", aleatorio);
+        }
     }
 
     /**
@@ -93,8 +104,7 @@ public class DemoWhileUno
      *  Parar cuando salga el 0. Escribir al final la suma
      *  Bucle controlado por un valor centinela
      */
-    public void ejemplo06( )
-    {
+    public void ejemplo06( ) {
 
     }
 
@@ -105,8 +115,7 @@ public class DemoWhileUno
      * Usar una variable booleana como conmutador (o switch - flag) para
      * salir del bucle
      */
-    public void ejemplo07()
-    {
+    public void ejemplo07() {
 
     }
 
@@ -115,9 +124,19 @@ public class DemoWhileUno
      *  y producto de impares entre 1 y 100 
      *   
      */
-    public  void ejemplo08()
-    {
-
+    public  void ejemplo08() {
+        int pares = 0;
+        int impares = 1;
+        int aleatorio = generador.nextInt(99) + 1;
+        while(aleatorio %2 == 0){
+            pares += aleatorio;
+            aleatorio = generador.nextInt(99) + 1;
+        }
+        while(aleatorio %2 != 0){
+            impares *= aleatorio;
+            aleatorio = generador.nextInt(99) + 1;
+        }
+        System.out.printf("Suma de pares %d producto de impares %,d", pares, impares);
     }
 
     /**
@@ -125,17 +144,15 @@ public class DemoWhileUno
      *  y producto de impares entre 1 y 100 
      *  Con una variable booleana que actúe de switch o conmutador
      */
-    public  void ejemplo09()
-    {
-
+    public  void ejemplo09() {
+        
     }
 
     /**
      * Generar n aleatorios entre 5 y 15 inclusive y contar los pares, los que acaban en 2
      * y sumar los impares
      */
-    public  void ejemplo10(int n)
-    {
+    public  void ejemplo10(int n) {
 
     }
 
@@ -339,6 +356,13 @@ public class DemoWhileUno
         DemoWhileUno miDemo = new DemoWhileUno();
         miDemo.ejemplo01();
         miDemo.ejemplo02();
+        miDemo.ejemplo03();
+        miDemo.ejemplo04();
+        miDemo.ejemplo05();
+        miDemo.ejemplo06();
+        miDemo.ejemplo07();
+        miDemo.ejemplo08();
+        miDemo.ejemplo09();
     }
 
 }
