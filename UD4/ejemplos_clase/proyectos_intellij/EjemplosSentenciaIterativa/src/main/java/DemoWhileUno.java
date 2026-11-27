@@ -35,11 +35,17 @@ public class DemoWhileUno
      */
     public void ejemplo01()
     {
-        int contadorSaludos = 0;
-        while(contadorSaludos < 10){
-            contadorSaludos++;
+        int contadorSaludos;
+        for (contadorSaludos = 1; contadorSaludos <= 10; contadorSaludos++){
             System.out.println("Hola " + contadorSaludos);
         }
+        /**
+        *int contadorSaludos = 0;
+        *while(contadorSaludos < 10){
+        *    contadorSaludos++;
+        *    System.out.println("Hola " + contadorSaludos);
+        *}
+         * */
     }
 
     /**
@@ -48,10 +54,14 @@ public class DemoWhileUno
      * 
      */
     public void ejemplo02() {
-        int vecesTirada = 0;
-        while(vecesTirada < 10){
-            vecesTirada++;
-        }
+        /**
+         * int tiradas = 1;
+         *         while(tiradas <= 10){
+         *             moneda.tirar();
+         *             System.out.printf("Ha salido cara? --> %b%n", moneda.esCara());
+         *             tiradas++;
+         * }
+         */
     }
 
     /**
@@ -61,10 +71,27 @@ public class DemoWhileUno
      * Uso de contadores
      */
     public void ejemplo03() {
-        int tiradas = 30, caras= 0, cruces = 0;
-        while (tiradas > 0 ){
-            tiradas --;
+        int tiradas = 30,caras = 0, cruces = 0;
+        for (tiradas = 30; tiradas > 0; tiradas --){
+            moneda.tirar();
+            if(moneda.esCara())
+                caras ++;
+            else
+                cruces++;
         }
+        /**
+         *int tiradas = 30, caras = 0, cruces = 0;
+         *         while (tiradas > 0){
+         *             tiradas--;
+         *
+         *             moneda.tirar();
+         *             if(moneda.esCara())
+         *                 caras++;
+         *             else
+         *                 cruces++;
+         *}
+         * System.out.printf("Han salido %d caras y %d cruces", caras, cruces);
+         * */
     }
 
     /**
@@ -145,7 +172,7 @@ public class DemoWhileUno
      *  Con una variable booleana que actúe de switch o conmutador
      */
     public  void ejemplo09() {
-        
+
     }
 
     /**
